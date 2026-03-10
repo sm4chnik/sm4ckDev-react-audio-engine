@@ -6,16 +6,16 @@ import { createAudio } from '@sm4ckdev/audio-react'
  */
 export const audio = createAudio({
   tracks: {
-    main:   '/audio/main-theme.mp3',
-    battle: '/audio/battle.mp3',
-    menu:   '/audio/menu.mp3',
+    main:   '/audio/music/main-theme.wav',
+    battle: '/audio/music/battle.wav',
+    menu:   '/audio/music/menu.wav',
   },
   sfx: {
-    hover:      '/audio/sfx/hover.mp3',
-    click:      '/audio/sfx/click.mp3',
-    modalOpen:  '/audio/sfx/modal-open.mp3',
-    modalClose: '/audio/sfx/modal-close.mp3',
-    explosion:  '/audio/sfx/explosion.mp3',
+    hover:      '/audio/sfx/hover.wav',
+    click:      '/audio/sfx/click.wav',
+    modalOpen:  '/audio/sfx/modal-open.wav',
+    modalClose: '/audio/sfx/modal-close.wav',
+    explosion:  '/audio/sfx/explosion.wav',
   },
   storageKey: 'react-audio-engine-demo/audio',
   defaults: {
