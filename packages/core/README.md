@@ -33,6 +33,10 @@ service.setVolume('interface', 50)
 // Global mute
 service.setMuted(true)
 
+// Resume AudioContext if suspended by browser autoplay policy
+// Call this inside any user-gesture handler before playing audio
+service.resumeContext()
+
 // Cleanup
 service.cleanup('effects')  // one category
 service.cleanup()           // all
@@ -56,4 +60,5 @@ service.cleanup()           // all
 | `getVolume(category)` | Returns current volume for a category |
 | `setMusicVolume(volume)` | Shortcut for `setVolume('music', volume)` |
 | `setMuted(muted)` | Global mute via `Howler.mute()` |
+| `resumeContext()` | Resumes the Web Audio `AudioContext` if suspended by browser autoplay policy |
 | `cleanup(category?)` | Unloads and clears Howl cache (all or per category) |
