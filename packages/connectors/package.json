@@ -1,0 +1,29 @@
+{
+  "name": "@sm4ckdev/audio-connectors",
+  "version": "0.1.0",
+  "description": "Event source adapters for react-audio-engine (EventEmitter, WebSocket, SSE, Custom)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

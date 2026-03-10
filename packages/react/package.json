@@ -1,0 +1,40 @@
+{
+  "name": "@sm4ckdev/audio-react",
+  "version": "0.1.0",
+  "description": "React hooks and Zustand store for react-audio-engine via createAudio() factory",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@sm4ckdev/audio-core": "workspace:*",
+    "@sm4ckdev/audio-connectors": "workspace:*",
+    "howler": "^2.2.4",
+    "zustand": "^5.0.6"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/howler": "^2.2.12",
+    "@types/react": "^19.0.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

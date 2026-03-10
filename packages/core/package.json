@@ -1,0 +1,33 @@
+{
+  "name": "@sm4ckdev/audio-core",
+  "version": "0.1.0",
+  "description": "Pure TypeScript audio service for games and apps, built on Howler.js",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "howler": "^2.2.4"
+  },
+  "devDependencies": {
+    "@types/howler": "^2.2.12",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
