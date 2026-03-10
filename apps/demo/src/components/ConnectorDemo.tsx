@@ -19,9 +19,9 @@ export function ConnectorDemo() {
   ).current
 
   audio.useAudioEvents(connector, {
-    explosion: '/audio/sfx/explosion.mp3',
-    click:     '/audio/sfx/click.mp3',
-    hover:     '/audio/sfx/hover.mp3',
+    explosion: '/audio/sfx/explosion.wav',
+    click:     '/audio/sfx/click.wav',
+    hover:     '/audio/sfx/hover.wav',
   })
 
   const trigger = (event: string) => emitRef.current?.(event)

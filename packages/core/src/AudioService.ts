@@ -24,8 +24,18 @@ export class AudioService {
       src: [src],
       loop: true,
       preload: true,
-      html5: true,
+      // html5: false — use Web Audio API so AudioContext.resume() works uniformly
     })
+  }
+
+  /**
+   * Resumes the Web Audio AudioContext if it was suspended by the browser's
+   * autoplay policy. Call this inside a user-gesture handler before playing.
+   */
+  resumeContext(): void {
+    if (Howler.ctx && Howler.ctx.state === 'suspended') {
+      void Howler.ctx.resume()
+    }
   }
 
   setMusicVolume(volume: number): void {

@@ -121,6 +121,8 @@ export function createAudioStore<
             if (state.currentMusicTrack === src) return
             if (!state.isInitialized) get().initialize()
 
+            service.resumeContext()
+
             const { musicCache, musicVolume, isMuted } = get()
             let howl = musicCache.get(src)
             if (!howl) {
@@ -154,11 +156,13 @@ export function createAudioStore<
 
           playInterfaceSound(src) {
             if (!get().isInitialized) get().initialize()
+            service.resumeContext()
             service.playSound('interface', src)
           },
 
           playEffectsSound(src) {
             if (!get().isInitialized) get().initialize()
+            service.resumeContext()
             service.playSound('effects', src)
           },
 
