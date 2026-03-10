@@ -5,3 +5,9 @@ dist
 .DS_Store
 .env
 .env.local
+
+# TypeScript build output inside src (apps/demo tsc outDir is src itself)
+apps/demo/src/**/*.js
+apps/demo/src/**/*.js.map
+apps/demo/src/**/*.d.ts
+apps/demo/src/**/*.d.ts.map
